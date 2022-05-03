@@ -12,7 +12,7 @@ const GetTodo = ({ editSingleTodo }) => {
   useEffect(() => {
     getlist()
   })
-  
+
   const deleteTodo = (id) => {
 
     fetch(`http://localhost:5000/list/${id}`, {
@@ -33,13 +33,13 @@ const GetTodo = ({ editSingleTodo }) => {
       <ul>
         {list.map((value, index) => {
           return (
-            <div>
+            <div className='list'>
               <li key={index}>
                 {value.todo}
               </li>
-              <button onClick={() => deleteTodo(value._id)}>Delete</button>
-              <button onClick={() => editSingleTodo(value._id)}>Edit</button>
-              <button>Completed</button>
+              <button className='tra' onClick={() => deleteTodo(value._id)}><ion-icon name="trash"></ion-icon></button>
+              <button className='edi' onClick={() => editSingleTodo(value._id)}><ion-icon name="create"></ion-icon></button>
+              <button className='don'><ion-icon name="done-all"></ion-icon></button>
             </div>
           )
         })}

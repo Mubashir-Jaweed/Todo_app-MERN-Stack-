@@ -27,10 +27,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className='container'>
       <AddTodo editTodo={editTodo} setEditTodo={setEditTodo}/>
       <GetTodo editSingleTodo={editSingleTodo}/>
-      </div>
     </div>
   );
 }

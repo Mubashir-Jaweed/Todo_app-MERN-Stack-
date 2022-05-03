@@ -1,2 +1,113 @@
+*{
+    
+    font-family: 'Ms Madi', cursive;
+    font-weight: 700;
+    font-size: 30px;
+
+}
+.App{
+    // border: 1px solid black;
+    height: 500px;
+    width: 400px;
+    margin: 50px auto;
 
 
+    .add{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    .input-c{
+        border-bottom: 2px solid rgb(214, 214, 214);
+        display: flex;
+        align-items: center;
+
+        input{
+            height: 40px;
+            width: 300px;
+            border: none;
+            font-size: 20px;
+            outline: none;
+        }
+    }
+
+       
+        button{
+            height: 40px;
+            // padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            color: rgb(0, 183, 255);
+            transition: 0.5s;
+
+            &:hover{
+                transform: rotate(360deg) scale(1.2,1.2);
+            }
+        }
+    }
+    .get{
+        height: 400px; ;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar{
+            width: 9px;
+            height: 10px;
+            border-radius:  50px ;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            width: 9px;
+            border-radius: 50px 0px 0px 50px;
+            background: linear-gradient(to top ,rgba(193, 209, 228, 0.155) ,rgb(218, 227, 232) , rgba(193, 209, 228, 0.155));
+        }
+
+        .list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1px;
+            margin-bottom: 5px;
+
+            button{
+                height: 40px;
+                // padding: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                background: transparent;
+                border-radius: 50px;
+                transition: 0.5s;
+                
+                
+
+                
+            }
+            .tra:hover{
+                    background-color:rgba(245, 77, 77, 0.5) ;
+                    transform: rotate(20deg);
+                }
+            .edi:hover{
+                    background-color:rgba(111, 77, 245, 0.5) ;
+                    transform: rotate(-360deg);
+                }
+            .don:hover{
+                    background-color:rgba(111, 245, 77, 0.5) ;
+                    transform: rotate(360deg);
+                }
+            li{
+                background-color:rgba(234, 236, 238, 0.179)  ;
+                width: 300px;
+                border-bottom: 2px solid rgb(2, 201, 6);
+                margin-right: 5px;
+                list-style: none;
+            }
+        }
+    }
+}

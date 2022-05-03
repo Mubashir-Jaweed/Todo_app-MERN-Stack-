@@ -35,12 +35,15 @@ const AddTodo = ({ editTodo, setEditTodo }) => {
 
   return (
     <div className='add'>
+      <div className='input-c'>
       <input placeholder={!editTodo ? 'Add Todo' : 'Edit Todo'} value={!editTodo ? addTodo : editTodo.todo} onChange={e=>!editTodo ? setAddTodo(e.target.value) : setEditTodo(e.target.value)}/>
+      <ion-icon className='mic' name="mic"></ion-icon>
+      </div>
       {!editTodo
         ?
-        <button onClick={() => addList()}>Click</button>
+        <button onClick={() => addList()}><ion-icon name="add-circle"></ion-icon></button>
         :
-        <button onClick={() => editList(todoId)}>Edit</button>
+        <button onClick={() => editList(todoId)}><ion-icon name="clipboard"></ion-icon></button>
       }
     </div>
   )
